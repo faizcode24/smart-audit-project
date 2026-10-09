@@ -1,0 +1,16 @@
+{
+  "name": "ai-audit-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-Enriched Continuous Audit Pipeline (MERN)",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n api,web -c blue,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "seed": "npm --prefix server run seed",
+    "build": "npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "engines": { "node": ">=18.18" }
+}
